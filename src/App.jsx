@@ -10,6 +10,7 @@ import './index.css';
 // Lazy-loaded pages (React.lazy + Suspense)
 const Login = lazy(() => import('./pages/Login'));
 const Signup = lazy(() => import('./pages/Signup'));
+const ForgotPassword = lazy(() => import('./pages/ForgotPassword'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const TripDetails = lazy(() => import('./pages/TripDetails'));
 const Budget = lazy(() => import('./pages/Budget'));
@@ -58,6 +59,14 @@ export default function App() {
               element={
                 <Suspense fallback={<LoadingFallback />}>
                   <Signup />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/forgot-password"
+              element={
+                <Suspense fallback={<LoadingFallback />}>
+                  <ForgotPassword />
                 </Suspense>
               }
             />
