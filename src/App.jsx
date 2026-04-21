@@ -4,6 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 import { TripProvider } from './context/TripContext';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
+import Background from './components/Background';
 import './index.css';
 
 // Lazy-loaded pages (React.lazy + Suspense)
@@ -39,6 +40,7 @@ function AppLayout({ children }) {
 export default function App() {
   return (
     <BrowserRouter>
+      <Background />
       <AuthProvider>
         <TripProvider>
           <Routes>
